@@ -68980,7 +68980,7 @@
 /***/ (function(module, exports) {
 
 	var path = 'C:/Users/xelits/Desktop/heroku/team-selection/src/cancel-confirmation.html';
-	var html = "<div class=\"modal-header\">\r\n    <button type=\"button\" class=\"close\" ng-click=\"homeCtrl.onCancelConfirmationModal\">&times;</button>\r\n    <h3 class=\"modal-title\" id=\"modal-title\">Select an Employee</h3>\r\n</div>\r\n<div class=\"modal-body\" id=\"modal-body\">\r\n    <p>Do you like to close Team and Employee selection ?</p>\r\n</div>\r\n\r\n<div class=\"modal-footer\">\r\n    <button class=\"btn btn-default\" type=\"button\" ng-click=\"homeCtrl.onCancelConfirmationModal()\">Cancel</button>\r\n    <button class=\"btn btn-primary\" type=\"button\" ng-click=\"homeCtrl.onConfirmationModal()\">OK</button>\r\n</div>\r\n";
+	var html = "<div class=\"modal-header\">\r\n    <button type=\"button\" class=\"close\" ng-click=\"homeCtrl.onCancelConfirmationModal()\">&times;</button>\r\n    <h3 class=\"modal-title\" id=\"modal-title\">Select an Employee</h3>\r\n</div>\r\n<div class=\"modal-body\" id=\"modal-body\">\r\n    <p>Do you like to close Team and Employee selection ?</p>\r\n</div>\r\n\r\n<div class=\"modal-footer\">\r\n    <button class=\"btn btn-default\" type=\"button\" ng-click=\"homeCtrl.onCancelConfirmationModal()\">Cancel</button>\r\n    <button class=\"btn btn-primary\" type=\"button\" ng-click=\"homeCtrl.onConfirmationModal()\">OK</button>\r\n</div>\r\n";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
 
