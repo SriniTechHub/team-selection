@@ -1,0 +1,12 @@
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Teams <button type="button" class="btn btn-default" ng-click="homeCtrl.open()"> Select an Employee</button></h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group" ng-repeat="teamObj in homeCtrl.companyData">
+            <li class="list-group-item active">{{teamObj.team}}</li>
+            <li class="list-group-item" ng-repeat="employee in teamObj.employees">{{employee}}</li>
+        </ul>
+    </div>
+</div>

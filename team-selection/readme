@@ -1,0 +1,13 @@
+Title: Team Selection project
+Description: Useing "Team Selection Project", we can configure the team and employees belonging to the the team.
+
+### commands to run after downloading the code
+
+1. npm install
+2. webpack
+3. npm start
+
+ ### Work in progress
+
+ Deploying project to heroku
+ Deploying porject to gcloud
