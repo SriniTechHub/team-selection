@@ -68952,7 +68952,7 @@
 /* 109 */
 /***/ (function(module, exports) {
 
-	var path = 'C:/Users/xelits/Desktop/github/SriniTechHub.github.io/team-selection/src/home.html';
+	var path = 'C:/Users/xelits/Desktop/heroku/team-selection/src/home.html';
 	var html = "<app-dialog>\r\n\r\n</app-dialog>";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
@@ -68961,7 +68961,7 @@
 /* 110 */
 /***/ (function(module, exports) {
 
-	var path = 'C:/Users/xelits/Desktop/github/SriniTechHub.github.io/team-selection/src/dialog-tpl.html';
+	var path = 'C:/Users/xelits/Desktop/heroku/team-selection/src/dialog-tpl.html';
 	var html = "\r\n<div class=\"panel panel-default\">\r\n    <div class=\"panel-heading\">\r\n        <h3 class=\"panel-title\">Teams <button type=\"button\" class=\"btn btn-default\" ng-click=\"homeCtrl.open()\"> Select an Employee</button></h3>\r\n    </div>\r\n    <div class=\"panel-body\">\r\n        <ul class=\"list-group\" ng-repeat=\"teamObj in homeCtrl.companyData\">\r\n            <li class=\"list-group-item active\">{{teamObj.team}}</li>\r\n            <li class=\"list-group-item\" ng-repeat=\"employee in teamObj.employees\">{{employee}}</li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
@@ -68970,7 +68970,7 @@
 /* 111 */
 /***/ (function(module, exports) {
 
-	var path = 'C:/Users/xelits/Desktop/github/SriniTechHub.github.io/team-selection/src/modal.html';
+	var path = 'C:/Users/xelits/Desktop/heroku/team-selection/src/modal.html';
 	var html = "\r\n<div>\r\n    <div class=\"modal-header\">\r\n        <button type=\"button\" class=\"close\" ng-click=\"homeCtrl.cancelSelectTeamEmployeeModal()\">&times;</button>\r\n        <h3 class=\"modal-title\" id=\"modal-title\">Select an Employee</h3>\r\n    </div>\r\n    <div class=\"modal-body\" id=\"modal-body\">\r\n        <div class=\"form-group\">\r\n            <div class=\"custom-checkbox\">\r\n                <input type=\"checkbox\" id=\"cb1\">\r\n                <label for=\"cb1\">Send welcome email to employee</label>\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"\">Select a Team in the Organization:</label>\r\n            <ui-select  on-select=\"homeCtrl.onTeamSelection()\" ng-model=\"homeCtrl.team.selected\" theme=\"bootstrap\">\r\n                <ui-select-match  placeholder=\"Select Team...\">{{$select.selected.team}}</ui-select-match>\r\n                <ui-select-choices repeat=\"item in homeCtrl.companyData | filter: $select.search\">\r\n                    <div ng-bind-html=\"item.team | highlight: $select.search\"></div>\r\n                </ui-select-choices>\r\n            </ui-select>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"\">Select an Employee:</label>\r\n            <ui-select  on-select=\"homeCtrl.onEmployeeSelection()\" ng-model=\"homeCtrl.employee.selected\" theme=\"bootstrap\">\r\n                <ui-select-match  placeholder=\"Select Employee...\">{{$select.selected}}</ui-select-match>\r\n                <ui-select-choices repeat=\"item in homeCtrl.employeesData | filter: $select.search\">\r\n                    <div ng-bind-html=\"item | highlight: $select.search\"></div>\r\n                </ui-select-choices>\r\n                <ui-select-no-choice>\r\n                   We couldn't find any choices...\r\n                </ui-select-no-choice>\r\n            </ui-select>\r\n        </div>\r\n    </div>\r\n    <div class=\"alert alert-danger\" role=\"alert\" ng-if=\"homeCtrl.isTeamNotSelected\">\r\n        <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Error:</span>\r\n        Please select a Team...\r\n    </div>\r\n    <div class=\"alert alert-danger\" role=\"alert\" ng-if=\"homeCtrl.isEmployeeNotSelected\">\r\n        <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Error:</span>\r\n        Please select an Employeee...\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button class=\"btn btn-default\" type=\"button\" ng-click=\"homeCtrl.cancelSelectTeamEmployeeModal()\">Cancel</button>\r\n        <button class=\"btn btn-primary\" type=\"button\" ng-click=\"homeCtrl.onTeamEmployeeSelectionCompleted()\">OK</button>\r\n    </div>\r\n</div>";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
@@ -68979,8 +68979,8 @@
 /* 112 */
 /***/ (function(module, exports) {
 
-	var path = 'C:/Users/xelits/Desktop/github/SriniTechHub.github.io/team-selection/src/cancel-confirmation.html';
-	var html = "<div class=\"modal-header\">\r\n    <button type=\"button\" class=\"close\" ng-click=\"homeCtrl.cancel()\">&times;</button>\r\n    <h3 class=\"modal-title\" id=\"modal-title\">Select an Employee</h3>\r\n</div>\r\n<div class=\"modal-body\" id=\"modal-body\">\r\n    <p>Do you like to close Team and Employee selection ?</p>\r\n</div>\r\n\r\n<div class=\"modal-footer\">\r\n    <button class=\"btn btn-default\" type=\"button\" ng-click=\"homeCtrl.onCancelConfirmationModal()\">Cancel</button>\r\n    <button class=\"btn btn-primary\" type=\"button\" ng-click=\"homeCtrl.onConfirmationModal()\">OK</button>\r\n</div>\r\n";
+	var path = 'C:/Users/xelits/Desktop/heroku/team-selection/src/cancel-confirmation.html';
+	var html = "<div class=\"modal-header\">\r\n    <button type=\"button\" class=\"close\" ng-click=\"homeCtrl.onCancelConfirmationModal\">&times;</button>\r\n    <h3 class=\"modal-title\" id=\"modal-title\">Select an Employee</h3>\r\n</div>\r\n<div class=\"modal-body\" id=\"modal-body\">\r\n    <p>Do you like to close Team and Employee selection ?</p>\r\n</div>\r\n\r\n<div class=\"modal-footer\">\r\n    <button class=\"btn btn-default\" type=\"button\" ng-click=\"homeCtrl.onCancelConfirmationModal()\">Cancel</button>\r\n    <button class=\"btn btn-primary\" type=\"button\" ng-click=\"homeCtrl.onConfirmationModal()\">OK</button>\r\n</div>\r\n";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
 
