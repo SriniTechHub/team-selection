@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "deploy": "gcloud app deploy",
-    "serve":"webpack-dev-server --hot --inline"
+    "serve": "webpack-dev-server --hot --inline"
   },
   "repository": {
     "type": "git",
@@ -43,11 +42,12 @@
     "angular": "^1.6.5",
     "angular-sanitize": "^1.6.5",
     "angular-ui-bootstrap": "^2.5.0",
-    "angular-ui-router": "^1.0.3",
+    "@uirouter/angularjs": "latest",
     "bootstrap": "^3.3.7",
     "bootstrap-less": "^3.3.8",
     "express": "^4.15.3",
     "jquery": "^3.2.1",
+    "ui-router": "^1.0.0-alpha.3",
     "ui-select": "^0.19.8"
   }
 }

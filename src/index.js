@@ -26,8 +26,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 app.controller('HomeController', ['$uibModal', '$log', function($uibModal, $log) {
     var homeCtrl = this;
-     homeCtrl.isEmployeeNotSelected = false;
-     homeCtrl.isTeamNotSelected = false;
+
     homeCtrl.companyData = [{
             team: 'Engineering',
             employees: ['Lawana Fan', 'Larry Rainer', 'Rahul Malik', 'Leah Shumway']
@@ -50,6 +49,8 @@ app.controller('HomeController', ['$uibModal', '$log', function($uibModal, $log)
     homeCtrl.open = function() {
     homeCtrl.team = undefined;
     homeCtrl.employee = undefined;
+    homeCtrl.isEmployeeNotSelected = false;
+         homeCtrl.isTeamNotSelected = false;
         homeCtrl.dialogSelectTeamEmployeeModalInstance = $uibModal.open({
             templateUrl: modalTplUrl,
             backdrop: 'static',
